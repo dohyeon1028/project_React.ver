@@ -227,3 +227,78 @@ footer {
 		}
 	}
 }
+
+@media screen and (max-width: 450px) {
+	footer {
+		height: 150px;
+		background-color: #eee;
+		position: relative;
+		.inner {
+			width: 90vw;
+			padding: 20px 5px;
+			.footer_body {
+				height: 20%;
+				.footer_body_ul {
+					display: none;
+				}
+				.footer_body_social {
+					position: absolute;
+					top: 5vw;
+					right: 10vw;
+				}
+			}
+			.footer_bottom {
+				width: 90vw;
+				position: absolute;
+				bottom: 1vw;
+				.part1 {
+					width: 100%;
+					margin: 0 auto;
+					height: 20%;
+					display: block;
+
+					.part1_left {
+						display: flex;
+						width: 100%;
+						i {
+							font-size: 3vw;
+							color: #333;
+						}
+						span {
+							color: #333;
+							font: 3vw/1 '맑은 고딕';
+							letter-spacing: -1px;
+							margin: 0 0 0 5px;
+						}
+						p {
+							color: #555;
+							font: 3vw/1 'arial';
+							letter-spacing: -0.5px;
+							margin: 0 8px;
+						}
+					}
+					.part1_right {
+						display: flex;
+						li {
+							margin-left: 0px;
+							margin-right: 10px;
+							a {
+								font: bold 2vw/1 '맑은 고딕';
+								color: #555;
+								letter-spacing: -1px;
+							}
+							&:nth-of-type(2) {
+								a {
+									color: #333;
+								}
+							}
+						}
+					}
+				}
+				.part2 {
+					display: none;
+				}
+			}
+		}
+	}
+}

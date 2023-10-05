@@ -21,7 +21,7 @@ function App() {
 
       {/* <Visual></Visual> */}
 
-      <Route path="/">
+      <Route exact path="/">
         <Visual onSelectTab={setSelectedTab} />
       </Route>
 

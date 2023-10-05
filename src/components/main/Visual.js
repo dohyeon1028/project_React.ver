@@ -1,10 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 function Visual({ onSelectTab }) {
     const handling = (tab) => {
         onSelectTab(tab)
     }
+
+    //js
+
+
+
+    //js
+
     return (
         <>
             <div id="frame">
@@ -20,7 +31,7 @@ function Visual({ onSelectTab }) {
                 </div>
                 <div className="item_wrap">
                     <div className="videoBox">
-                        <video src="img/banner/2.mp4" muted loop autoplay>UK Heritage
+                        <video src="img/banner/2.mp4" muted loop autoPlay>UK Heritage
                             자신만의 개성과 자유로운 표현을 쫓는 90년대 런던의 체이서들</video>
                     </div>
                     <div className="imgBox">
@@ -188,8 +199,12 @@ function Visual({ onSelectTab }) {
 
                     </li>
                 </ul>
-                <div className="prev"><i className="fa-solid fa-chevron-left"></i></div>
-                <div className="next"><i className="fa-solid fa-chevron-right"></i></div>
+                <div className="prev">
+                    <FontAwesomeIcon icon={faChevronLeft} />
+                </div>
+                <div className="next">
+                    <FontAwesomeIcon icon={faChevronRight} />
+                </div>
             </div>
             <div id="full_banner">
                 <section>

@@ -3,14 +3,14 @@ import React from 'react'
 function Filter_wrap() {
     return (
         <>
-            <div class="filter_wrap">
+            <div className="filter_wrap">
 
-                <div class="filter_item_category">
-                    <div class="filter_tit">
+                <div className="filter_item_category">
+                    <div className="filter_tit">
                         CATEGORY
-                        <i class="fa-solid fa-xmark close"></i>
+                        <i className="fa-solid fa-xmark close"></i>
                     </div>
-                    <div class="filter_sublist">
+                    <div className="filter_sublist">
                         <label for="category">
                             <input type="checkbox" title="의류" value="1" id="class-1" />
                             <span>의류</span>
@@ -25,9 +25,9 @@ function Filter_wrap() {
                         </label>
                     </div>
                 </div>
-                <div class="filter_item_filter">
-                    <div class="filter_tit">FILTER</div>
-                    <div class="filter_sublist">
+                <div className="filter_item_filter">
+                    <div className="filter_tit">FILTER</div>
+                    <div className="filter_sublist">
                         <label for="filter">
                             <input type="checkbox" title="남녀공용" value="1" id="class-1" />
                             <span>남녀공용</span>
