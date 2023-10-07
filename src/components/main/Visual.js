@@ -1,9 +1,11 @@
-import React from 'react';
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import Frame from './Frame';
 
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 function Visual({ onSelectTab }) {
     const handling = (tab) => {
@@ -11,20 +13,14 @@ function Visual({ onSelectTab }) {
     }
 
     //js
-
-
-
+    const frame = useRef(Frame());
+    const panel = frame.current.props.children;
+    console.log(panel);
     //js
 
     return (
         <>
-            <div id="frame">
-                <ul className="panel">
-                    <li><img src="img/slide/1.jpg" alt="더 풍성해진 컬러 옵션과 트렌디한 무드로 돌아온 클래식 셋업" /></li>
-                    <li><img src="img/slide/2.jpg" alt="일상과 운동화의 경계를 허물고 매일을 편안하게" /></li>
-                    <li><img src="img/slide/3.jpg" alt="90년대 런던의 체이서들의 유스컬쳐와 당대를 풍미했던 엄브로 헤리티지의 만남" /></li>
-                </ul>
-            </div>
+            <Frame />
             <div id="banner">
                 <div className="imgBox">
                     <img src="img/banner/1.jpg" alt="출시예정 제품 구매시 10% 쿠폰 / 신규 가입시 1만원 쿠폰" />

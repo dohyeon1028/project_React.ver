@@ -33,14 +33,14 @@ function Event({ selectedMenu }) {
             <main id="event">
                 <h1>EVENT</h1>
                 <ul className="btns">
-                    <li className={selectedTab === "tab1" && "on"} onClick={() => handlingTab("tab1")}>THE SOUND OF MOVEMENT</li>
-                    <li className={selectedTab === "tab2" && "on"} onClick={() => handlingTab("tab2")}>SWEAT ITEMS COLLECTION</li>
-                    <li className={selectedTab === "tab3" && "on"} onClick={() => handlingTab("tab3")}>DOUBLE DECKER</li>
-                    <li className={selectedTab === "tab4" && "on"} onClick={() => handlingTab("tab4")}>PASSION FOR FOOTBALL</li>
+                    <li className={selectedTab === "tab1" ? "on" : ""} onClick={() => handlingTab("tab1")}>THE SOUND OF MOVEMENT</li>
+                    <li className={selectedTab === "tab2" ? "on" : ""} onClick={() => handlingTab("tab2")}>SWEAT ITEMS COLLECTION</li>
+                    <li className={selectedTab === "tab3" ? "on" : ""} onClick={() => handlingTab("tab3")}>DOUBLE DECKER</li>
+                    <li className={selectedTab === "tab4" ? "on" : ""} onClick={() => handlingTab("tab4")}>PASSION FOR FOOTBALL</li>
                 </ul>
 
                 <section>
-                    <article className={selectedTab === "tab1" && "on"}>
+                    <article className={selectedTab === "tab1" ? "on" : ""}>
                         <div className="bgImgBox">
                             <img src="../img/full_banner/1.jpg" alt="" />
                         </div>
@@ -56,7 +56,7 @@ function Event({ selectedMenu }) {
                             <p>브라이튼의 정적을 깨운 엄브로만의 자유로운 움직임</p>
                         </div>
                     </article>
-                    <article className={selectedTab === "tab2" && "on"}>
+                    <article className={selectedTab === "tab2" ? "on" : ""}>
                         <div className="bgImgBox">
                             <img src="../img/full_banner/2.jpg" alt="UK Heritage" />
                         </div>
@@ -72,7 +72,7 @@ function Event({ selectedMenu }) {
                             <p>자신만의 개성과 자유로운 표현을 쫓는 90년대 런던의 체이서들</p>
                         </div>
                     </article>
-                    <article className={selectedTab === "tab3" && "on"}>
+                    <article className={selectedTab === "tab3" ? "on" : ""}>
                         <div className="bgImgBox">
                             <img src="../img/full_banner/3.jpg" alt="90년대 런던과 현재 한국의 시공간을 교차하며 경험하는 서로 간의 유스 컬쳐" />
                         </div>
@@ -87,7 +87,7 @@ function Event({ selectedMenu }) {
                             <p>90년대 런던과 현재 한국의 시공간을 교차하며 경험하는 서로 간의 유스 컬쳐</p>
                         </div>
                     </article>
-                    <article className={selectedTab === "tab4" && "on"}>
+                    <article className={selectedTab === "tab4" ? "on" : ""}>
                         <div className="bgImgBox">
                             <img src="../img/full_banner/4.jpg" alt="여름을 더 뜨겁게, 엄브로 풋살화 & 유커스텀" />
                         </div>

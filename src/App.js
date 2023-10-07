@@ -26,10 +26,13 @@ function App() {
       </Route>
 
       <Route path="/new" component={NewArrival} />
+
       <Route path="/best" component={WeeklyBest} />
+
       <Route path="/event">
         <Event selectedMenu={selectedTab} />
       </Route>
+
       <Route path="/football" component={Football} />
 
       <Footer></Footer>

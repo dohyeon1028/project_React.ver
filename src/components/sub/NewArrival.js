@@ -1,6 +1,13 @@
-import React from 'react'
+import { useEffect, useRef } from "react"
+
 
 function NewArrival() {
+    const section = useRef();
+
+    useEffect(() => {
+        console.log(section);
+    }, [])
+
     return (
         <>
             <main>
@@ -13,15 +20,15 @@ function NewArrival() {
                                 <i className="fa-solid fa-xmark close"></i>
                             </div>
                             <div className="filter_sublist">
-                                <label for="category">
+                                <label htmlFor="category">
                                     <input type="checkbox" title="의류" value="1" id="class-1" />
                                     <span>의류</span>
                                 </label>
-                                <label for="category">
+                                <label htmlFor="category">
                                     <input type="checkbox" title="신발" value="2" id="class-2" />
                                     <span>신발</span>
                                 </label>
-                                <label for="category">
+                                <label htmlFor="category">
                                     <input type="checkbox" title="악세사리" value="2" id="class-2" />
                                     <span>악세사리</span>
                                 </label>
@@ -30,24 +37,24 @@ function NewArrival() {
                         <div className="filter_item_filter">
                             <div className="filter_tit">FILTER</div>
                             <div className="filter_sublist">
-                                <label for="filter">
+                                <label htmlFor="filter">
                                     <input type="checkbox" title="남녀공용" value="1" id="class-1" />
                                     <span>남녀공용</span>
                                 </label>
-                                <label for="filter">
+                                <label htmlFor="filter">
                                     <input type="checkbox" title="남성" value="2" id="class-2" />
                                     <span>남성</span>
                                 </label>
-                                <label for="filter">
+                                <label htmlFor="filter">
                                     <input type="checkbox" title="여성" value="2" id="class-2" />
                                     <span>여성</span>
                                 </label>
                             </div>
                         </div>
                     </div>
-                    <div className="list_control_wrap">
+                    <div className="list_control_wrap" >
                         <h2>NEW ARRIVAL <span>(402)</span></h2>
-                        <section>
+                        <section ref={section}>
                             <article>
                                 <div className="imgBox">
                                     <img src="../img/New/1.jpg" alt="GOALE POST PREMIUM (고알레 포스트 프리미엄) 풋살화 / SKY BLUE" className="before" />
