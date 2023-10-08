@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+
 import { Link } from 'react-router-dom';
 import Frame from './Frame';
 
@@ -13,9 +13,9 @@ function Visual({ onSelectTab }) {
     }
 
     //js
-    const frame = useRef(Frame());
-    const panel = frame.current.props.children;
-    console.log(panel);
+    // const frame = useRef(Frame());
+    // const panel = frame.current.props.children;
+    // console.log(panel);
     //js
 
     return (

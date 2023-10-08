@@ -9,7 +9,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faX } from '@fortawesome/free-solid-svg-icons';
 
-function Header() {
+function Header({ onSelectTab }) {
     let logoURL = "./img/logo.jpg";
 
     const [aside, setAside] = useState("");
@@ -45,7 +45,7 @@ function Header() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/event">
+                        <Link onClick={onSelectTab("tab1")} to="/event">
                             Event
                         </Link>
                     </li>

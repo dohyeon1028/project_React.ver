@@ -5,6 +5,7 @@ import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 
 import Visual from "./components/main/Visual";
+import AutoSlider from "./components/main/AutoSlider";
 
 import NewArrival from "./components/sub/NewArrival";
 import WeeklyBest from "./components/sub/WeeklyBest";
@@ -17,12 +18,13 @@ function App() {
   const [selectedTab, setSelectedTab] = useState("tab1");
   return (
     <>
-      <Header></Header>
+      <Header onSelectTab={setSelectedTab} />
 
       {/* <Visual></Visual> */}
 
       <Route exact path="/">
         <Visual onSelectTab={setSelectedTab} />
+        {/* <AutoSlider></AutoSlider> */}
       </Route>
 
       <Route path="/new" component={NewArrival} />
