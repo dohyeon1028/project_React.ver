@@ -1,35 +1,18 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState, useCallback } from 'react';
+import ScrollToTop from '../../function/ScrollToTop';
 
 function Event({ selectedMenu }) {
     const [selectedTab, setSelectedTab] = useState(selectedMenu || "tab1");
-    const handlingTab = (tab) => {
+
+    const handlingTab = useCallback((tab) => {
         setSelectedTab(tab);
-    }
+    }, []);
+    
+    
 
-    const btns = document.querySelectorAll(".btns>li");
-    const articles = document.querySelectorAll("section article");
-
-    let idx = 0;
-
-    btns.forEach((el, index) => {
-        el.addEventListener("click", () => {
-            remove(btns);
-            remove(articles);
-            add(btns);
-            add(articles);
-            idx = index;
-
-            function remove(el) {
-                el[idx].classList.remove("on");
-            }
-            function add(el) {
-                el[index].classList.add("on");
-            }
-        })
-    });
     return (
         <>
+            <ScrollToTop />
             <main id="event">
                 <h1>EVENT</h1>
                 <ul className="btns">

@@ -1,6 +1,6 @@
-
 import { Link } from 'react-router-dom';
 import Frame from './Frame';
+import ScrollToTop from '../../function/ScrollToTop';
 
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
@@ -20,6 +20,7 @@ function Visual({ onSelectTab }) {
 
     return (
         <>
+            <ScrollToTop />
             <Frame />
             <div id="banner">
                 <div className="imgBox">
