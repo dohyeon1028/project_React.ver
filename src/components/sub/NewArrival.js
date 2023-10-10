@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import FilterWrap from "./common/Filter_wrap";
-import ScrollToTop from "././function/ScrollToTop";
+import FilterWrap from "../common/Filter_wrap";
+import ScrollToTop from "../../function/ScrollToTop";
 
 function NewArrival() {
     useEffect(() => {
