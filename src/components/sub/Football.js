@@ -1,10 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import ScrollToTop from '../../function/ScrollToTop';
 
 function Football() {
+    const [Vids, setVids] = useState([]);
+    const [Open, SetOpen] = useState(false);
+    const [Index, SetIndex] = useState(0);
+
+    let key = "AIzaSyBxnZ1kg_BJjZCcQrxHM4iiBdGWtEnUNgE";
+    let playlistId = "PLbpunYhud0VvdFsrmh_G73_-dGUcDPO67";
+    const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlistId}`;
+
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [])
+        axios
+            .get(url)
+            .then((json) => {
+                setVids(json.data.items);
+            })
+    }, [url])
+
+
+    useEffect(() => {
+        console.log(Vids);
+    }, [Vids])
+
     return (
         <>
             <ScrollToTop />
@@ -49,10 +68,11 @@ function Football() {
                     </figure>
                     <div className="vidList">
                         <section className="video_frame">
+                            //Vids.map
                         </section>
                     </div>
                 </div>
-            </main>
+            </main >
         </>
     )
 }
