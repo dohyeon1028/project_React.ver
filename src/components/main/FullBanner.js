@@ -9,7 +9,7 @@ function FullBanner(onSelectTab) {
         <div id="full_banner">
             <section>
                 <div className="imgBox">
-                    <img src="img/full_banner/1.jpg" alt="브라이튼의 정적을 깨운 엄브로만의 자유로운 움직임" />
+                    <img src={`${process.env.PUBLIC_URL}/img/full_banner/1.jpg`} alt="브라이튼의 정적을 깨운 엄브로만의 자유로운 움직임" />
                 </div>
                 <div className="txtBox">
                     <h1>THE SOUND OF MOVEMENT</h1>

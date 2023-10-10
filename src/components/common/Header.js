@@ -5,7 +5,6 @@ import { faShoppingBag, faMagnifyingGlass, faBars, faTimes } from '@fortawesome/
 
 
 const Header = ({ onSelectTab }) => {
-  let logoURL = './img/logo.jpg';
   const [asideVisible, setAsideVisible] = useState(false);
   const [pageLoaded, setPageLoaded] = useState(false);
 
@@ -84,7 +83,7 @@ const Header = ({ onSelectTab }) => {
       <header>
         <h1>
           <Link to="/">
-            <img src="./img/logo.jpg" alt='엄브로 로고 이미지' />
+            <img src={`${process.env.PUBLIC_URL}/img/logo.jpg`} alt='엄브로 로고 이미지' />
           </Link>
         </h1>
         {renderNavigationLinks()}
