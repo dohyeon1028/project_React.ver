@@ -4,7 +4,6 @@ function Filter_wrap() {
     return (
         <>
             <div className="filter_wrap">
-
                 <div className="filter_item_category">
                     <div className="filter_tit">
                         CATEGORY
@@ -32,11 +31,11 @@ function Filter_wrap() {
                             <input type="checkbox" title="남성" value="1" id="filter-1" />
                             <span>남성</span>
                         </label>
-                            <label htmlFor="filter-2">
+                        <label htmlFor="filter-2">
                             <input type="checkbox" title="여성" value="2" id="filter-2" />
                             <span>여성</span>
                         </label>
-                            <label htmlFor="filter-3">
+                        <label htmlFor="filter-3">
                             <input type="checkbox" title="남여공용" value="3" id="filter-3" />
                             <span>남여공용</span>
                         </label>
