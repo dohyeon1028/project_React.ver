@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ScrollToTop from '../../function/ScrollToTop';
 
 function Football() {
-    useEffect(()=>{
+    useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
     return (

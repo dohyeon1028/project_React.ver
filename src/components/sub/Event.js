@@ -7,8 +7,8 @@ function Event({ selectedMenu }) {
     const handlingTab = useCallback((tab) => {
         setSelectedTab(tab);
     }, []);
-    
-    
+
+
 
     return (
         <>
