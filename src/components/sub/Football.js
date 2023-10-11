@@ -68,7 +68,20 @@ function Football() {
                     </figure>
                     <div className="vidList">
                         <section className="video_frame">
-                            //Vids.map
+                            {/* {Vids.map(() => (
+                                <article style="left: ${(50 + (25 * index)) % 100}%;">
+                                    <img src="../img/football/youtube/pc_ucustom_contents_zone.png" className="bg" alt="컨텐츠란 배경사진" />
+                                    <a href="${el.snippet.resourceId.videoId}" class="pic">
+                                        <img src="${el.snippet.thumbnails.medium.url}" />
+                                    </a>
+
+                                    <div class="con">
+                                        <h2>CONTENTS ZONE</h2>
+                                        <p>2023 UMBRO x GOALE</p>
+                                        <a href="${el.snippet.resourceId.videoId}">View more</a>
+                                    </div>
+                                </article>
+                            ))} */}
                         </section>
                     </div>
                 </div>

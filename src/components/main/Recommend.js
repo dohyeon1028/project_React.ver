@@ -8,7 +8,8 @@ function Recommend() {
 
     const slideTo = (position) => {
         if (slide.current) {
-            slide.current.style.left = `-${(position - 1) * 110}vw`;
+            slide.current.style.left = `${(position - 1) * 110}vw`;
+            console.log(position - 1);
         }
     };
 
@@ -166,7 +167,7 @@ function Recommend() {
                 </li>
             </ul>
             <div className="prev" onClick={() => {
-                setNum((num + 5) % 3);
+                setNum((num + 2) % 3);
             }} >
                 <FontAwesomeIcon icon={faChevronLeft} />
             </div>
