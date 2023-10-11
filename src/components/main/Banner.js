@@ -24,7 +24,7 @@ function Banner() {
             </div>
             <div className="item_wrap">
                 <div className="videoBox">
-                    <video src={`${process.env.PUBLIC_URL}/img/banner/2.mp4`} muted loop autoPlay>UK Heritage
+                    <video src="https://images.descentekorea.co.kr/contents/directImgUpload/230703_UMB_TASLAN_PC.mp4" muted loop autoPlay>UK Heritage
                         자신만의 개성과 자유로운 표현을 쫓는 90년대 런던의 체이서들</video>
                 </div>
                 <div className="imgBox">

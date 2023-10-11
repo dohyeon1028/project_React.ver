@@ -30,7 +30,7 @@ function Event({ selectedMenu }) {
                         <div className="ContentsWrap">
                             <div className="videoBox">
                                 <video loop muted autoPlay>
-                                    <source src={`${process.env.PUBLIC_URL}/img/event/article_video/1.mp4`} type="" />
+                                    <source src="https://images.descentekorea.co.kr/contents/directImgUpload/230703_UMB_TASLAN_PC.mp4" type="" />
                                     THE SOUND OF MOVEMENT 브라이튼의
                                     정적을 깨운 엄브로만의 자유로운 움직임
                                 </video>
@@ -46,7 +46,7 @@ function Event({ selectedMenu }) {
                         <div className="ContentsWrap">
                             <div className="videoBox">
                                 <video loop autoPlay muted>
-                                    <source src={`${process.env.PUBLIC_URL}/img/banner/2.mp4`} type="" />
+                                    <source src="https://images.descentekorea.co.kr/contents/directImgUpload/230823_UMB_UKheritage.mp4" type="" />
                                     UK Heritage 자신만의 개성과 자유로운 표현을 쫓는 90년대 런던의
                                     체이서들
                                 </video>
