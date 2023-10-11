@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import FilterWrap from "../common/Filter_wrap";
 import ScrollToTop from '../../function/ScrollToTop';
 
 function WeeklyBest() {
+    const section = useRef();
+
+    useEffect(() => {
+        const articles = [];
+        for (let i = 0; i < 24; i++) {
+            articles.push(section.current.children[i]);
+        }
+
+        articles.map((el, index) => (
+            el.innerHTML += `
+                <div class="rank">${index + 1}</div>
+            `
+        ))
+    }, [])
     return (
         <>
             <ScrollToTop />
@@ -11,7 +25,7 @@ function WeeklyBest() {
                     <FilterWrap />
                     <div className="list_control_wrap">
                         <h2>LIVE RANKING <span> (09:00:00 updated)</span></h2>
-                        <section>
+                        <section ref={section}>
                             <article>
                                 <div className="imgBox">
                                     <img src={`${process.env.PUBLIC_URL}/img/New/1.jpg`} alt="GOALE POST PREMIUM (고알레 포스트 프리미엄) 풋살화 / SKY BLUE" />

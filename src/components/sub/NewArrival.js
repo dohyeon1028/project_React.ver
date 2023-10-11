@@ -1,11 +1,33 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import FilterWrap from "../common/Filter_wrap";
 import ScrollToTop from "../../function/ScrollToTop";
 
+function hoverEvent(el) {
+    el.children[0].addEventListener("mouseenter", () => {
+        el.children[0].children[0].style.opacity = "0";
+
+        setTimeout(() => {
+            el.children[0].children[1].style.opacity = "1";
+        }, 10);
+    })
+    el.children[0].addEventListener("mouseleave", () => {
+        setTimeout(() => {
+            el.children[0].children[0].style.opacity = "1";
+        }, 10);
+        el.children[0].children[1].style.opacity = "0";
+    })
+}
+
 function NewArrival() {
+    const section = useRef();
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+        const articles = []
+        for (let i = 0; i < 24; i++) {
+            articles.push(section.current.children[i]);
+        }
+        articles.map((el) => (hoverEvent(el)))
+
+    }, [])
     return (
         <>
             <ScrollToTop />
@@ -14,7 +36,7 @@ function NewArrival() {
                     <FilterWrap />
                     <div className="list_control_wrap" >
                         <h2>NEW ARRIVAL <span>(402)</span></h2>
-                        <section>
+                        <section ref={section}>
                             <article>
                                 <div className="imgBox">
                                     <img src={`${process.env.PUBLIC_URL}/img/New/1.jpg`} alt="GOALE POST PREMIUM (고알레 포스트 프리미엄) 풋살화 / SKY BLUE" className="before" />

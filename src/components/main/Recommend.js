@@ -9,7 +9,6 @@ function Recommend() {
     const slideTo = (position) => {
         if (slide.current) {
             slide.current.style.left = `${(position - 1) * 110}vw`;
-            console.log(position - 1);
         }
     };
 
