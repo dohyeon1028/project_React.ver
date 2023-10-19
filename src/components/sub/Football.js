@@ -4,15 +4,19 @@
 import ScrollToTop from '../../function/ScrollToTop';
 import Frame from './football/Frame';
 import FootballItems from './football/FootballItems';
+import { useSelector } from 'react-redux';
 
-
+import { Navigation, Pagination, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 function Football() {
 
-    //자동슬라이드
-    // 자동슬라이드
 
-
+    const Vids = useSelector((store) => store.youtubeReducer.youtube)
+    console.log(Vids);
 
     return (
         <>
@@ -33,20 +37,34 @@ function Football() {
                     </figure>
                     <div className="vidList">
                         <section className="video_frame">
-                            {/* {Vids.map(() => (
-                                <article style="left: ${(50 + (25 * index)) % 100}%;">
-                                    <img src="../img/football/youtube/pc_ucustom_contents_zone.png" className="bg" alt="컨텐츠란 배경사진" />
-                                    <a href="${el.snippet.resourceId.videoId}" class="pic">
-                                        <img src="${el.snippet.thumbnails.medium.url}" />
-                                    </a>
+                            <Swiper
+                                modules={[Pagination, Navigation, Autoplay]} autoplay={{ delay: 5000, disableOnInteraction: false }}
+                                pagination={{ clickable: true }}
+                                spaceBetween={1}
+                                loop={true}
+                                slidesPerView={1}
+                                centeredSlides={true}
+                            >
+                                {Vids.map((el, idx) => (
+                                    <SwiperSlide key={idx}>
+                                        <img src={`${process.env.PUBLIC_URL}/img/football/youtube/pc_ucustom_contents_zone.png`} className="bg" alt="컨텐츠란 배경사진" />
 
-                                    <div class="con">
-                                        <h2>CONTENTS ZONE</h2>
-                                        <p>2023 UMBRO x GOALE</p>
-                                        <a href="${el.snippet.resourceId.videoId}">View more</a>
-                                    </div>
-                                </article>
-                            ))} */}
+                                        <div className="pic">
+                                            <img src={el.snippet.thumbnails.standard.url} alt={el.snippet.title} />
+                                            {/* <FontAwesomeIcon icon={faYoutube} ref={line}
+                                            onClick={() => { pop.current.open(); setIndex(idx); }
+                                            } /> */}
+                                        </div>
+
+                                        <div className="con">
+                                            <h2>CONTENTS ZONE</h2>
+                                            <p>2023 UMBRO x GOALE</p>
+                                            <span>View more</span>
+                                        </div>
+
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
                         </section>
                     </div>
                 </div>
