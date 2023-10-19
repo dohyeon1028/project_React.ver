@@ -37,6 +37,7 @@ function App() {
   }, [])
 
   const [selectedTab, setSelectedTab] = useState("tab1");
+  const [filter, setFilter] = useState(null);
   // 부모컴포넌트 랜더링
   return (
     <>
@@ -48,7 +49,7 @@ function App() {
         <Visual onSelectTab={setSelectedTab} />
       </Route>
 
-      <Route path="/new" component={NewArrival} />
+      <Route path="/new" component={NewArrival} filter={filter} setFilter={setFilter} />
 
       <Route path="/best" component={WeeklyBest} />
 
@@ -61,7 +62,6 @@ function App() {
       <Footer></Footer>
 
     </>
-
 
   );
 }

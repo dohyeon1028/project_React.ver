@@ -18,9 +18,11 @@ function hoverEvent(el) {
     })
 }
 
-function NewArrival() {
+function NewArrival({ filter }) {
     const section = useRef();
+    const filters = filter
     useEffect(() => {
+        console.log(filters);
         const articles = []
         for (let i = 0; i < 24; i++) {
             articles.push(section.current.children[i]);
@@ -308,7 +310,6 @@ function NewArrival() {
                         </section>
                     </div>
                 </div>
-
             </main>
         </>
     )
