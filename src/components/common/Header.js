@@ -21,7 +21,7 @@ const Header = ({ onSelectTab }) => {
   }, []);
 
   const renderNavigationLinks = () => (
-    <ul id="gnb">
+    <ul id="gnb" onClick={handleAsideClose}>
       <li>
         {pageLoaded ? (
           <Link to="/">SHOP</Link>
@@ -92,17 +92,15 @@ const Header = ({ onSelectTab }) => {
           <FontAwesomeIcon icon={faBars} onClick={handleAsideOpen} />
         </div>
       </header>
-      {asideVisible && (
-        <aside className="mobile_aside">
-          <div className="inner">
-            <div className="close" onClick={handleAsideClose}>
-              <FontAwesomeIcon icon={faTimes} />
-            </div>
-            {renderNavigationLinks()}
-            {renderUtilityLinks()}
+      <aside className={`mobile_aside ${asideVisible && "on"}`} >
+        <div className="inner">
+          <div className="close" onClick={handleAsideClose}>
+            <FontAwesomeIcon icon={faTimes} />
           </div>
-        </aside>
-      )}
+          {renderNavigationLinks()}
+          {renderUtilityLinks()}
+        </div>
+      </aside >
     </>
   );
 };

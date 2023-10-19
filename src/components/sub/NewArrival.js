@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 import FilterWrap from "../common/Filter_wrap";
 import ScrollToTop from "../../function/ScrollToTop";
 
+import { Link } from "react-router-dom";
+
 function hoverEvent(el) {
     el.children[0].addEventListener("mouseenter", () => {
         el.children[0].children[0].style.opacity = "0";
@@ -28,8 +30,8 @@ function NewArrival({ filter }) {
             articles.push(section.current.children[i]);
         }
         articles.map((el) => (hoverEvent(el)))
+    }, []);
 
-    }, [])
     return (
         <>
             <ScrollToTop />
@@ -45,7 +47,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/1_hover.jpg`} alt="GOALE POST PREMIUM (고알레 포스트 프리미엄) 풋살화 / SKY BLUE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">GOALE POST PREMIUM (고알레 포스트 프리미엄) 풋살화 / SKY BLUE</a>
+                                    <Link to="#;">GOALE POST PREMIUM (고알레 포스트 프리미엄) 풋살화 / SKY BLUE</Link>
                                     <p>149,000원</p>
                                 </figcaption>
                             </article>
@@ -56,7 +58,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/2_hover.jpg`} alt="GOALE POST (고알레 포스트) 풋살화 / MULTI COLOR" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">GOALE POST (고알레 포스트엄) 풋살화 / MULTI COLOR</a>
+                                    <Link to="#;">GOALE POST (고알레 포스트엄) 풋살화 / MULTI COLOR</Link>
                                     <p>139,000원</p>
                                 </figcaption>
                             </article>
@@ -67,7 +69,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/3_hover.jpg`} alt="고알레 풋볼 넌슬립 크루 삭스 / SKY BLUE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">고알레 풋볼 넌슬립 크루 삭스 / SKY BLUE</a>
+                                    <Link to="#;">고알레 풋볼 넌슬립 크루 삭스 / SKY BLUE</Link>
                                     <p>29,900원</p>
                                 </figcaption>
                             </article>
@@ -78,8 +80,8 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/4_hover.jpg`} alt="[얼리버드쿠폰]파이핑 후드 티셔츠 / OATMEAL BEIGE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 후드 티셔츠 / OATMEAL BEIGE
-                                    </a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 후드 티셔츠 / OATMEAL BEIGE
+                                    </Link>
                                     <p>109,000원</p>
                                 </figcaption>
                             </article>
@@ -90,7 +92,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/5_hover.jpg`} alt="[얼리버드쿠폰]파이핑 후드 티셔츠 / D.RED" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 후드 티셔츠 / D.RED</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 후드 티셔츠 / D.RED</Link>
                                     <p>109,000원</p>
                                 </figcaption>
                             </article>
@@ -101,7 +103,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/6_hover.jpg`} alt="[얼리버드쿠폰]파이핑 후드 티셔츠 / BLACK" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 후드 티셔츠 / BLACK</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 후드 티셔츠 / BLACK</Link>
                                     <p>109,000원</p>
                                 </figcaption>
                             </article>
@@ -112,7 +114,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/7_hover.jpg`} alt="[얼리버드쿠폰]파이핑 맨투맨 / OATMEAL BEIGE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 맨투맨 / OATMEAL BEIGE</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 맨투맨 / OATMEAL BEIGE</Link>
                                     <p>99,000원</p>
                                 </figcaption>
                             </article>
@@ -123,7 +125,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/8_hover.jpg`} alt="[얼리버드쿠폰]파이핑 맨투맨 / OATMEAL BEIGE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 맨투맨 / D.RED</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 맨투맨 / D.RED</Link>
                                     <p>99,000원</p>
                                 </figcaption>
                             </article>
@@ -134,7 +136,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/9_hover.jpg`} alt="[얼리버드쿠폰]파이핑 맨투맨 / OATMEAL BEIGE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 니트 조거 팬츠     / OATMEAL BEIGE</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 니트 조거 팬츠     / OATMEAL BEIGE</Link>
                                     <p>109,000원</p>
                                 </figcaption>
                             </article>
@@ -145,7 +147,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/10_hover.jpg`} alt="[얼리버드쿠폰]파이핑 니트 조거 팬츠 / D.RED" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 니트 조거 팬츠 / D.RED</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 니트 조거 팬츠 / D.RED</Link>
                                     <p>109,000원</p>
                                 </figcaption>
                             </article>
@@ -156,7 +158,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/11_hover.jpg`} alt="[얼리버드쿠폰]파이핑 니트 조거 팬츠 / BLACK" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 니트 조거 팬츠 / BLACK</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 니트 조거 팬츠 / BLACK</Link>
                                     <p>109,00원</p>
                                 </figcaption>
                             </article>
@@ -167,8 +169,8 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/12_hover.jpg`} alt="[얼리버드쿠폰]경량 다운 자켓 / OATMEAL BEIGE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]경량 다운 자켓 / OATMEAL BEIGE
-                                    </a>
+                                    <Link to="#;">[얼리버드쿠폰]경량 다운 자켓 / OATMEAL BEIGE
+                                    </Link>
                                     <p>169,000원</p>
                                 </figcaption>
                             </article>
@@ -179,7 +181,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/1_hover.jpg`} alt="GOALE POST PREMIUM (고알레 포스트 프리미엄) 풋살화 / SKY BLUE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">GOALE POST PREMIUM (고알레 포스트 프리미엄) 풋살화 / SKY BLUE</a>
+                                    <Link to="#;">GOALE POST PREMIUM (고알레 포스트 프리미엄) 풋살화 / SKY BLUE</Link>
                                     <p>149,000원</p>
                                 </figcaption>
                             </article>
@@ -190,7 +192,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/2_hover.jpg`} alt="GOALE POST (고알레 포스트) 풋살화 / MULTI COLOR" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">GOALE POST (고알레 포스트엄) 풋살화 / MULTI COLOR</a>
+                                    <Link to="#;">GOALE POST (고알레 포스트엄) 풋살화 / MULTI COLOR</Link>
                                     <p>139,000원</p>
                                 </figcaption>
                             </article>
@@ -201,7 +203,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/3_hover.jpg`} alt="고알레 풋볼 넌슬립 크루 삭스 / SKY BLUE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">고알레 풋볼 넌슬립 크루 삭스 / SKY BLUE</a>
+                                    <Link to="#;">고알레 풋볼 넌슬립 크루 삭스 / SKY BLUE</Link>
                                     <p>29,900원</p>
                                 </figcaption>
                             </article>
@@ -212,8 +214,8 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/4_hover.jpg`} alt="[얼리버드쿠폰]파이핑 후드 티셔츠 / OATMEAL BEIGE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 후드 티셔츠 / OATMEAL BEIGE
-                                    </a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 후드 티셔츠 / OATMEAL BEIGE
+                                    </Link>
                                     <p>109,000원</p>
                                 </figcaption>
                             </article>
@@ -224,7 +226,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/5_hover.jpg`} alt="[얼리버드쿠폰]파이핑 후드 티셔츠 / D.RED" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 후드 티셔츠 / D.RED</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 후드 티셔츠 / D.RED</Link>
                                     <p>109,000원</p>
                                 </figcaption>
                             </article>
@@ -235,7 +237,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/6_hover.jpg`} alt="[얼리버드쿠폰]파이핑 후드 티셔츠 / BLACK" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 후드 티셔츠 / BLACK</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 후드 티셔츠 / BLACK</Link>
                                     <p>109,000원</p>
                                 </figcaption>
                             </article>
@@ -246,7 +248,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/7_hover.jpg`} alt="[얼리버드쿠폰]파이핑 맨투맨 / OATMEAL BEIGE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 맨투맨 / OATMEAL BEIGE</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 맨투맨 / OATMEAL BEIGE</Link>
                                     <p>99,000원</p>
                                 </figcaption>
                             </article>
@@ -257,7 +259,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/8_hover.jpg`} alt="[얼리버드쿠폰]파이핑 맨투맨 / OATMEAL BEIGE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 맨투맨 / D.RED</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 맨투맨 / D.RED</Link>
                                     <p>99,000원</p>
                                 </figcaption>
                             </article>
@@ -268,7 +270,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/9_hover.jpg`} alt="[얼리버드쿠폰]파이핑 맨투맨 / OATMEAL BEIGE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 니트 조거 팬츠     / OATMEAL BEIGE</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 니트 조거 팬츠     / OATMEAL BEIGE</Link>
                                     <p>109,000원</p>
                                 </figcaption>
                             </article>
@@ -279,7 +281,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/10_hover.jpg`} alt="[얼리버드쿠폰]파이핑 니트 조거 팬츠 / D.RED" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 니트 조거 팬츠 / D.RED</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 니트 조거 팬츠 / D.RED</Link>
                                     <p>109,000원</p>
                                 </figcaption>
                             </article>
@@ -290,7 +292,7 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/11_hover.jpg`} alt="[얼리버드쿠폰]파이핑 니트 조거 팬츠 / BLACK" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]파이핑 니트 조거 팬츠 / BLACK</a>
+                                    <Link to="#;">[얼리버드쿠폰]파이핑 니트 조거 팬츠 / BLACK</Link>
                                     <p>109,00원</p>
                                 </figcaption>
                             </article>
@@ -301,8 +303,8 @@ function NewArrival({ filter }) {
                                     <img src={`${process.env.PUBLIC_URL}/img/New/12_hover.jpg`} alt="[얼리버드쿠폰]경량 다운 자켓 / OATMEAL BEIGE" className="after" />
                                 </div>
                                 <figcaption>
-                                    <a href="#;">[얼리버드쿠폰]경량 다운 자켓 / OATMEAL BEIGE
-                                    </a>
+                                    <Link to="#;">[얼리버드쿠폰]경량 다운 자켓 / OATMEAL BEIGE
+                                    </Link>
                                     <p>169,000원</p>
                                 </figcaption>
                             </article>

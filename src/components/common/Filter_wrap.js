@@ -1,9 +1,14 @@
-import React from 'react';
+import { useEffect, useRef } from 'react';
 
 function Filter_wrap() {
+    const filter = useRef(null);
+
+    useEffect(() => {
+        window.innerWidth <= 450 ? filter.current.classList.add("hide") : console.log("higher than 450px");
+    }, [])
     return (
         <>
-            <div className="filter_wrap">
+            <div className="filter_wrap" ref={filter}>
                 <div className="filter_item_category">
                     <div className="filter_tit">
                         CATEGORY

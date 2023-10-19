@@ -6,6 +6,9 @@
 	@import '../common/filterWrap';
 	.list_control_wrap {
 		width: 88vw;
+		&.full {
+			width: 100%;
+		}
 		h2 {
 			font: bold 2vw/1 'Phudu';
 			display: flex;
