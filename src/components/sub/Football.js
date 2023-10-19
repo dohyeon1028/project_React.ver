@@ -6,10 +6,8 @@ import Frame from './football/Frame';
 import FootballItems from './football/FootballItems';
 import CustomZone from './football/CustomZone';
 
+
 function Football() {
-
-
-
 
     return (
         <>
@@ -19,6 +17,7 @@ function Football() {
                 <FootballItems />
                 <CustomZone />
             </main >
+
         </>
     )
 }
