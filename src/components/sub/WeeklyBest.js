@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function WeeklyBest() {
     const section = useRef();
-
+    const wrap = useRef();
     useEffect(() => {
         const articles = [];
         for (let i = 0; i < 24; i++) {
@@ -27,7 +27,7 @@ function WeeklyBest() {
             <main>
                 <div className="BEST_prod_wrap">
                     <FilterWrap />
-                    <div className={`list_control_wrap`}>
+                    <div className="list_control_wrap" ref={wrap}>
                         <h2>LIVE RANKING <span> (09:00:00 updated)</span></h2>
                         <section ref={section}>
                             <article>

@@ -336,104 +336,60 @@
 
 	#recommend {
 		width: 90vw;
-		height: 48vw;
-		margin: 80px auto 30px;
-		position: relative;
-		overflow: hidden;
+		height: 50vh;
 		&::before {
 			width: 90vw;
-			top: 5px;
 		}
+
 		h1 {
-			width: fit-content;
-			padding: 0 10px;
-			margin: 0 auto 10px;
-			font: bold 3.5vw/1 'Phudu';
+			width: 70vw;
+			font: bold 3vw/1 'Phudu';
 		}
 		.items_wrap {
-			width: calc(25% * 15);
-			position: static;
-			top: 50px;
-			overflow: hidden; //
-			&::after {
-				content: '';
-				display: block;
-				clear: both;
-			}
 			li {
-				width: calc(90vw / 4);
-				padding: 2vw 1vw;
-				display: block;
-				float: left;
-				img {
-					width: 100%;
-					height: 90%;
-					object-fit: cover;
-				}
-				.txt {
-					width: 100%;
-					height: 12vw;
-					padding: 0 0px;
-					position: relative;
-					p {
-						width: 100%;
-						opacity: 1;
-						transform: translateY(0px);
-						&.brand {
-							font: 1vw/1 'Phudu';
-							color: #777;
-							margin-top: 1vw;
-						}
-						&.prod_title {
-							width: 125%;
-							font: 1vw/1 'Nanum Gothic';
-							color: #999;
-							margin-top: 1vw;
-							transform-origin: top left;
-							transform: scale(0.8);
-						}
-						&.prod_price {
-							font: bold 1.2vw/1 'Phudu';
-							color: #000;
-							position: absolute;
-							bottom: -1vw;
-							text-align: right;
-						}
-					}
-				}
 				&:nth-of-type(1) {
-					position: static;
-					left: unset;
+					position: absolute;
+					left: 110vw;
+					top: 5%;
 				}
 				&:nth-of-type(2) {
-					position: static;
-					left: unset;
+					position: absolute;
+					left: 110vw;
+					top: 35%;
 				}
 				&:nth-of-type(3) {
-					position: static;
-					left: unset;
+					position: absolute;
+					left: 110vw;
+					top: 65%;
+				}
+				article {
+					width: calc((80vw / 5));
+					.txt {
+						height: 4vw;
+						padding: 0 2px;
+						p {
+							opacity: 1;
+							transform: translateY(0px);
+							&.brand {
+								margin-top: 0vh;
+							}
+							&.prod_title {
+								margin-top: 1vw;
+							}
+							&.prod_price {
+								font: bold 1vw/1 'Phudu';
+								margin-top: 0.5vw;
+							}
+						}
+					}
 				}
 			}
 		}
 		.prev {
-			top: 48%;
-			i {
-				font-size: 30px;
-				color: rgba($color: #000000, $alpha: 0.7);
-			}
-			width: 18.75px;
-			height: 30px;
-			left: -20px;
+			display: none;
 		}
 		.next {
-			top: 48%;
-			i {
-				font-size: 30px;
-				color: rgba($color: #000000, $alpha: 0.7);
-			}
-			width: 18.75px;
-			height: 30px;
-			right: -20px;
+			display: none;
 		}
 	}
 

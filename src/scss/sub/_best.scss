@@ -6,13 +6,8 @@
 	@import '../common/filterWrap';
 	.list_control_wrap {
 		width: 88vw;
-		&.full {
-			width: 100%;
-		}
 		h2 {
-			font: bold 2vw/1 'Phudu';
-			display: flex;
-			align-items: center;
+			font: bold 2vw/7vh 'Phudu';
 			height: 7vh;
 			letter-spacing: 1px;
 			span {
@@ -24,6 +19,7 @@
 		section {
 			width: 100%;
 			display: flex;
+			justify-content: space-between;
 			flex-wrap: wrap;
 			opacity: 1;
 			gap: 0.5vw;
@@ -76,6 +72,58 @@
 						opacity: 0;
 						clip-path: circle(0 at 50% 50%);
 						font-size: 1px;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 450px) {
+	.BEST_prod_wrap {
+		padding: 3vh 2vw 20vh;
+		display: block;
+		.list_control_wrap {
+			width: 100%;
+			h2 {
+				font: bold 5vw/5vh 'Phudu';
+				text-align: center;
+				height: 5vh;
+				margin-bottom: 3vh;
+			}
+			section {
+				width: 100%;
+				article {
+					width: calc(100% / 3 - 10px);
+					height: calc(100vw / 3 + 10vh);
+					.imgBox {
+						width: 100%;
+						height: calc(100vw / 3 - 10px);
+						img {
+							&.before {
+								opacity: 1;
+							}
+							&.after {
+								opacity: 0;
+							}
+						}
+					}
+					figcaption {
+						padding: 0.5vh 0.5vw 0;
+						height: 8vh;
+						position: relative;
+						a {
+							height: 8vw;
+							position: absolute;
+							top: 1vh;
+							font-size: 0.6em;
+							color: #999;
+						}
+						p {
+							font: bold 1.2vw/1 'Phudu';
+							position: absolute;
+							bottom: 0vw;
+							right: 0;
+						}
 					}
 				}
 			}

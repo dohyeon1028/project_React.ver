@@ -61,7 +61,7 @@ const Header = ({ onSelectTab }) => {
   );
 
   const renderUtilityLinks = () => (
-    <ul className="util">
+    <ul className="util" onClick={handleAsideClose}>
       <li>
         <Link to="/">로그인</Link>/<Link to="/">회원가입</Link>
       </li>

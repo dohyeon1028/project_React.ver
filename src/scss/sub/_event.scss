@@ -91,3 +91,41 @@
 		}
 	}
 }
+
+@media screen and (max-width: 450px) {
+	#event {
+		margin: 4vw auto 8vw;
+		h1 {
+			font: bold 6vw/15vh 'Phudu';
+		}
+		.btns {
+			flex-wrap: wrap;
+			li {
+				width: calc(80vw / 2);
+				height: 5vw;
+				text-align: center;
+				font: 2vw/1 'Phudu';
+			}
+		}
+		section {
+			margin-bottom: 30vh;
+			article {
+				.ContentsWrap {
+					width: 100%;
+					padding: 1vw 15vw;
+					.videoBox {
+						height: 25vw;
+					}
+					h2 {
+						letter-spacing: 0px;
+						margin: 4vw 0 0.5vw 0;
+					}
+					p {
+						width: auto;
+						letter-spacing: -1px;
+					}
+				}
+			}
+		}
+	}
+}

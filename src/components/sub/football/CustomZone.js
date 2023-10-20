@@ -30,7 +30,6 @@ function CustomZone() {
                     <section className="video_frame">
                         <Swiper
                             modules={[Pagination, Navigation, Autoplay]} autoplay={{ delay: 5000, disableOnInteraction: false }}
-                            pagination={{ clickable: true }}
                             spaceBetween={1}
                             loop={true}
                             slidesPerView={1}
